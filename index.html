@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Ana's List | official&copy;</title>
+    <link rel="shortcut icon" href="cloud-304241_1280.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div>
+                <h1>Minhas Tarefas</h1>
+                <p>Organize seu dia e suas atividades aqui!</p>
+            </div>
+
+            <span class="material-symbols-outlined header-icon"> <!-- não precisa de virgula para adicionar outra class, só dar espaço -->
+                format_list_bulleted_add
+            </span>
+        </header>
+
+        <div class="form-tarefa"> <!-- "formulario" -->
+            <input type="text" id="input-tarefa" placeholder="Digite sua tarefa:...">
+
+            <button type="button">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+                Adicionar
+            </button>
+
+        </div>
+
+        <nav class="filtros">
+            <button type="button" class="filtro active">Todas</button>
+            <button type="button" class="filtro">Pendentes</button>
+            <button type="button" class="filtro">Concluidas</button>
+        </nav>
+
+        <u id="lista-tarefas" class="lista-tarefas"> <!-- feita para guardar uma lista -->
+            <li class="tarefa">
+                <button class="botao-check" onclick="alternarTarefa()">
+                    <span class="material-symbols-outlined">
+                        radio_button_unchecked
+                    </span>
+                </button>
+
+                <span class="tarefa-texto">
+                    Estudar Javascripit
+                </span>
+
+                <button class="botao-excluir" onclick="excluirTarefa()">
+                    <span class="material-symbols-outlined">
+                        delete
+                    </span>
+                </button>
+
+            </li>
+        </ul>
+
+    </main>
+    
+</body>
+</html>

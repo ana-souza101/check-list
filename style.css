@@ -1,0 +1,159 @@
+/* o ponto antes do nome se trata da class */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #dbe0f3;
+    color: black;
+    min-width: 100vh;
+    padding: 50px 20px;  /* 50 cima baixo, 20 lados */
+}
+
+button, input{
+    font: inherit;  /* ignora as outras configurações de font anteriores */
+}
+
+button{
+    cursor: pointer;  /* dedinho para cima quando chegar no botão */
+}
+
+.container{
+    max-width: 650px;
+    margin: 0px auto;  /* basicamente centraliza o main, auto = automatica, ou flex center*/
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between; /* espaço entre eles */
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1{
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.header p{
+    color: #68738a;
+}
+
+.header-icon{
+    font-size: 36px;
+    color: #4f46e5;
+    background-color: #e0e7ff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form-tarefa{
+    display: flex;
+    background-color: rgb(236, 235, 235);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.form-tarefa input{
+    flex: 1; /* pode usar todo espaço disponível */
+    border: none;
+    outline: none; /* borda de quando clica o mause em cima */
+    padding: 10px;
+    background-color:rgb(236, 235, 235) ;
+}
+.form-tarefa button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    transition: .2s;
+}
+
+.form-tarefa button:hover{
+    background-color: #4338ca;
+    color: black;
+}
+
+.filtros{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filtro{
+    padding: 10px 15px;
+    background-color: rgb(236, 235, 235);
+    border-radius: 18px;
+    color: #6a727c;
+    border: none;
+    transition: .2s;
+}
+
+.filtro:hover{
+    background-color: #e8e7ff;
+}
+
+.filtro.active{
+    background-color: #e8e7ff;
+    color: #4338ca;
+    font-weight: bold;
+}
+
+.lista-tarefas{
+    display: flex;
+    flex-direction: column; /* uma em baixo da outra  */
+    gap: 12px; /* entre as tarefas */
+    list-style: none;
+    text-decoration: none;
+}
+
+.tarefa{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background-color: rgb(236, 235, 235) ;
+    padding: 18px;
+    border-radius: 13px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.tarefa-texto{
+    flex: 1;
+    overflow: anywhere;  /* para não quebrar linha */
+}
+
+.tarefa-concluida .tarefa-texto{
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.botao-check, .botao-excluir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #94a3b8;
+    border: none;
+}
+
+.botao-excluir:hover{
+    color: rgb(199, 110, 110);
+}
+
+.tarefa-concluida .botao-check{
+    color: #6366f1;
+}
