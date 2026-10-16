@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" defer></script>  <!-- o defer faz com que o JS seja executado depopis do HTML -->
     <title>Ana's List | official&copy;</title>
     <link rel="shortcut icon" href="cloud-304241_1280.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
@@ -25,9 +25,9 @@
         </header>
 
         <div class="form-tarefa"> <!-- "formulario" -->
-            <input type="text" id="input-tarefa" placeholder="Digite sua tarefa:...">
+            <input type="text" id="input-tarefa" placeholder="Digite sua tarefa:..." onkeydown="if(event.key === 'Enter') adicionarTarefa()"> <!-- verifica se a tecla foi clicada -->
 
-            <button type="button">
+            <button type="button" onclick="adicionarTarefa()">
                 <span class="material-symbols-outlined">
                     add
                 </span>
@@ -42,25 +42,8 @@
             <button type="button" class="filtro">Concluidas</button>
         </nav>
 
-        <u id="lista-tarefas" class="lista-tarefas"> <!-- feita para guardar uma lista -->
-            <li class="tarefa">
-                <button class="botao-check" onclick="alternarTarefa()">
-                    <span class="material-symbols-outlined">
-                        radio_button_unchecked
-                    </span>
-                </button>
+        <ul id="lista-tarefas" class="lista-tarefas"> <!-- feita para guardar uma lista -->
 
-                <span class="tarefa-texto">
-                    Estudar Javascripit
-                </span>
-
-                <button class="botao-excluir" onclick="excluirTarefa()">
-                    <span class="material-symbols-outlined">
-                        delete
-                    </span>
-                </button>
-
-            </li>
         </ul>
 
     </main>
